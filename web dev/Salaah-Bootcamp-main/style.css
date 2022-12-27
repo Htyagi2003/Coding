@@ -1,0 +1,106 @@
+*{
+    background-color:pink;
+    color: black;
+}
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:black;
+    font-size: 13px;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.profile{
+    border-radius:100%;
+    width: 80%;
+    
+}
+.left{
+    text-align: left;
+}
+.btn{
+    padding: 1rem;
+}
+.btn-primary{
+    background-color: red;
+    border: none;
+}
+.about-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.about-col{
+    padding: 2rem;
+}
+
+.skills-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.whatido{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.whatican{
+    padding: 2rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    
+    
+}
+input{
+    padding: 1rem;
+    width: 40%;
+}
+.but{
+    margin: 3rem;
+}
+.grey{
+    color: #535353;
+}
+.whatido-col{
+    width: 20%;
+    background-color: #212121;
+}
+.grey-bg{
+background-color: #212121;
+}
+.skils-row{
+    background-color: #212121;
+}
+.skills-col{
+    background-color: #212121;
+}
+.green{
+    background-color: red;
+}
