@@ -9,7 +9,6 @@ int main(){
     printf("enter the elements of array:\n");
     for(j=0;j<n;j++){
         scanf("%d",&arr[j]);
-
     }
     printf("enter the element to find:\n");
     scanf("%d",&k);
