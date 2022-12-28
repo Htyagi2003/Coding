@@ -41,6 +41,7 @@ void show(Node*start)
         printf("[ %d|%x ]----",temp->val,temp->next);
         temp=temp->next;
     }
+    printf("\n");
 }
 void insert_end(Node **start,int x){
     Node *newnode=createNode(x);
