@@ -412,38 +412,69 @@
 // 	}
 // 	return 0;
 // }
-#include <cmath>
-#include <cstdio>
-#include <vector>
-#include <iostream>
-#include <set>
-#include <algorithm>
-using namespace std;
+// #include <cmath>
+// #include <cstdio>
+// #include <vector>
+// #include <iostream>
+// #include <set>
+// #include <algorithm>
+// using namespace std;
 
 
-int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
-    int q;
-    cin>>q;
-    while(q--){
-        int x,y;
-        cin>>x>>y;
-        set<int>s;
-        if(1==y){
-            s.insert(x);
-        }
-        else if(2==y){
-            s.erase(x);
-        }
-        else if(3==y){
-            set<int>::const_iterator itr = s.find(x);
-            cout << ( (itr != s.end()) ? "Yes" : "No") << endl;
-        }   
-    }
-    return 0;
+// int main() {
+//     /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+//     int q;
+//     cin>>q;
+//     while(q--){
+//         int x,y;
+//         cin>>x>>y;
+//         set<int>s;
+//         if(1==y){
+//             s.insert(x);
+//         }
+//         else if(2==y){
+//             s.erase(x);
+//         }
+//         else if(3==y){
+//             set<int>::const_iterator itr = s.find(x);
+//             cout << ( (itr != s.end()) ? "Yes" : "No") << endl;
+//         }   
+//     }
+//     return 0;
+// }
+
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+		int t;
+	scanf("%d",&t);
+	while(t--){
+	    int n;
+	    int c;
+	    c=0;
+	    int max;
+	    scanf("%d",&n);
+	    int a[n];
+	    int b[n];
+	    for(int i=0;i<n;i++){
+	    scanf("%d",&a[i]);}
+	    
+	    for(int i=0;i<n;i++){
+	    scanf("%d",&b[i]);}
+	    
+	    for(int i=0;i<n;i++){
+	    if(a[i]==0||b[i]==0){
+	    max=c;
+	    c=0;}
+	    else
+	    c++;}
+	    if(max>=c){
+	    printf("%d\n",max);}
+	    else{
+	    printf("%d\n",c);
+	    }
+	    
+	}
+	return 0;
 }
-
-
-
-
-
