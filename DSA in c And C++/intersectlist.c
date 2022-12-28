@@ -46,7 +46,7 @@ void SortList(Node **start){
 int main(){
     Node * st1 = initialize();
     Node * st2 = initialize();
-    Node * un = initialize();
+    Node * is = initialize();
     insert_beg(&st1,4);
     insert_beg(&st1,5);
     insert_beg(&st1,2);
@@ -65,51 +65,32 @@ int main(){
 //--------------------------------------------------------------------------------//
 
 //Order of (n^2)
-    // struct Node * t1 = st1, * t2 = st2;
-    // while (t1 != NULL) {
-    //     insert_last( & un, t1 -> val);
-    //     t1 = t1 -> next;
+    // struct Node * temp1 = st1;
+    // while (temp1 != NULL){
+    //     if (searchin(st2, temp1 -> val))
+    //         insert_last( &is, temp1 -> val);
+    //     temp1 = temp1 -> next;
     // }
-    // while (t2 != NULL) {
-    //     if (!searchin(un, t2 -> val))
-    //         insert_last( & un, t2 -> val);
-    //     t2 = t2 -> next;
-    // }
-    // show(un);
-
+    // show(is);
+    
 //--------------------------------------------------------------------------------//
 
 //O(n)
     struct Node * t1 = st1, * t2 = st2;
     while(t1 !=NULL && t2 !=NULL){
         if(t1->val < t2->val){
-            insert_end(&un,t1->val);
             t1=t1->next;
         }
-        else if (t1->val == t2->val)
-        {
-            insert_end(&un,t1->val);
+        else if (t1->val == t2->val){
+            insert_end(&is,t1->val);
             t1=t1->next;
             t2=t2->next;
         }
         else{
-            insert_end(&un,t2->val);
             t2=t2->next;
         }
     }
-    if(t1 == NULL){
-        while(t2!=NULL){
-            insert_end(&un,t2->val);
-            t2=t2->next;
-        }
-    }
-    if(t2 == NULL){
-        while(t1!=NULL){
-            insert_end(&un,t1->val);
-            t1=t1->next;
-        }
-    }
-    printf("\n\nThe Union of the two Linked List is: \n");
-    show(un);
+    printf("\n\nThe Intersection of the two Linked List is: \n");
+    show(is);
     return 0;
 }
