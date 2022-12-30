@@ -11,7 +11,7 @@
     <script>
         var subject={sub1:"javascript"
     ,sub2:"html",sub3:"anular"};
-    <!-- for in loopm is used to get properties of object -->
+    //for in loopm is used to get properties of object
     for(let i in subject){
         document.write(i);
     }
@@ -123,14 +123,43 @@
         return 1
     }
     function validation(){
+        var t=document.f2.pas.value.length;
+        document.write(t);
         if(document.f2.user.value==""){
           alert("blank")
+          return false;
         }
-        else if(document.f2.pas.value==""){
+        if(document.f2.pass.value==""){
             alert("blank")
+            return false;
           }
+        if(document.f2.pass.value.length<8){
+            alert("must use 8 length pass")
+            return false;
+          }
+        if(document.f2.phone.value.isNaN()){
+            alert("use numbers only")
+            return false;
+          }
+          return true;
         
     }
+    //event in js
+    // changing the state of an object is known as an event 
+    //events are actions those are dtedcted by javascript script 
+    // the process of creating o r reacrting over each event is known event handling
+    //we have to use saome fn.. to use the event so we can call the function 
+    // to the corresponding event
+     function message2(){
+        alert("HELLO HARSH !!");
+     }
+     function changecolor(){
+        document.getElementById("p").style.backgroundColor="red";
+     }
+     function changecolor2(){
+        document.getElementById("p").style.backgroundColor="green";
+     }
+
 
     </script>
     <br>
@@ -147,12 +176,15 @@
         <label>enter username</label>
         <input type="text" name="user">
         <label >enter password</label>
-        <input type="text" name="pass">
+        <input type="password" name="pass">
+        <label >enter phone no.</label>
+        <input type="text" name="phone">
         <button> submit button 2</button>
     </form>
 
 
-
+     <center><button onclick="message2()"> click me once </button></center>
+     <p  id="p" style="background-color: green;" onmouseover="changecolor()" onmouseout="changecolor2()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae asperiores, repellendus consequatur consectetur quos illum neque in nostrum officia! Voluptas, cupiditate rem iure suscipit quia ratione possimus. Nostrum, vel tempore</p>
 
 
 </body>
