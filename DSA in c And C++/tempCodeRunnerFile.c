@@ -1,32 +1,64 @@
 #include<stdio.h>
+#define size 10
+struct stack
+{
+    int data[size];
+    int top; // default value is garbage beacuse tyagin is chu==
+};
+struct stack init(struct stack d){
+    d.top=-1;
+    return d;
+}
+int isempty(struct stack d){
+    return(d.top==-1);
+    }
+struct stack push(struct stack d,int r){
+    d.top++;
+    d.data[d.top] = r;
+    return d;
+}
+void show(struct stack d){
+    int i;
+    if(d.top==-1){
+            printf("stack is empty\n");
+    
+    }
+    else{
+        printf("data of stack:\n");
+        for (i = d.top; i>=0; i--)
+        {
+            printf("%d ",d.data[i]);
+        }
+        
+    }
+}
+struct stack pop(struct stack d){
+    if(isempty(d)){
+        printf("stack is empty\n");
+    }
+    else{
+        printf("%d",d.data[d.top]);
+        d.top--;
+        return d;
+    }
+}
 int main(){
-    int i,c,a[4]={0,0,1,1};
-    int b[4]={0,1,0,1};
-    printf("NAME = HARSH TYAGI\n");
-    printf("ROLL NO. = 2100320120072");
-    printf("\nTRUTH TABLE OF AND GATE :");
-    printf("\n========================================");
-    printf("\nA\t\tB\t\tA and B");
-    printf("\n========================================");
-    for(i=0;i<4;i++){
-        c=a[i]&b[i];
-        printf("\n%d\t\t%d\t\t %d",a[i],b[i],c);
+    struct stack d;
+    d=init(d);
+    int num;
+    printf("enter the number you want to convert:\n");
+    scanf("%d",&num);
+while(num>0){
+    int r=num%2;
+    d=push(d,r);
+    num/=2;
+}
+printf("Binary:");
+    while (!isempty(d))
+    {
+        d=pop(d);
     }
-    printf("\nTRUTH TABLE OF OR GATE : ");
-    printf("\n========================================");
-    printf("\nA\t\tB\t\tA OR B");
-    printf("\n========================================");
-    for(i=0;i<4;i++){
-        c=a[i]|b[i];
-        printf("\n%d\t\t%d\t\t %d",a[i],b[i],c);
-    }
-    printf("\nTRUTH TABLE OF NOT GATE :");
-    printf("\n========================================");
-    printf("\nA\t\t Not A");
-    printf("\n========================================");
-    for(i=0;i<2;i++){
-        c=!b[i];
-        printf("\n%d\t\t %d",b[i],c);
-    }
+
+    
 
 }
