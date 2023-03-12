@@ -3,8 +3,8 @@ int main(){
     int m,n;
     int arr1[10];
     int arr2[10];
-    printf("NAME = gaurav patel \n");
-    printf("ROLL NO. = 2100320120068\n");
+    printf("NAME = Harsh Tyagi \n");
+    printf("ROLL NO. = 2100320120072\n");
     printf("enter the size of set1:\n");
     scanf("%d",&n);
     printf("enter the element of set1:\n");
