@@ -17,10 +17,11 @@ class Student:
         print('roll no=',self.rollno)
         print('marks=',self.marks)
 s=Student('Harsh',100,72)
-s1=Student('gandu',0,88)
+s1=Student('Harshit',0,88)
 s.details()
 s1.details()
 print(s.marks,s.rollno,s.name)
+print(s1.__dict__)
 #documentation string represents the descreption of the class with in the doc string is always optional. we can get docstring by using the following two ways
 #1.print(doc)or help()
 #types of variables and methods
