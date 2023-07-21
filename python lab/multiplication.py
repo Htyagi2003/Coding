@@ -29,3 +29,6 @@ for r in result:
 import numpy as np
 result2=np.dot(A,B)
 print(result2)
+result3=[[sum(a*b for a,b in zip(x_row,y_col)) for y_col in zip(*B)] for x_row in A]
+print(result3)
+# %%

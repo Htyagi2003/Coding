@@ -1,48 +1,46 @@
-#include <bits/stdc++.h>
+
+#include <iostream>
+#include <map>
+#include <vector>
 using namespace std;
-
-int main(){
-    sort(arr,arr+size);
-    for(int i=0;i<size;i++){
-        int ind=upper_bound(arr+i+1,arr+size,arr[i]+n)-arr-1;
-        if(abs(arr[ind]-arr[i])==n)
-        return 1;
+int main() {
+    map<int,string>mpp;
+    mpp[1]="Ravi";
+    mpp.insert({2,"HArsh"});
+    mpp[1]="Gaurav";
     
+    mpp.insert({3,"lavish"});
+    // mpp.clear();
+    // mpp.pop_back();
+    for(auto it :mpp){
+        cout<<it.first<<" "<<it.second<<endl;
     }
-    return -1;
-
-
-
-    sort(arr,arr+size);
-    int l=0;
-    int r=1;
-    bool ans=false;
-    while(l<size && r<size){
-    int diff=arr[r]-arr[l];
-    if(diff==n and l!=r){
-    ans=true;
-    break;
+    if(mpp.find(5)!=mpp.end()){
+        mpp.erase(5);
     }
-    else if(diff>n)
-    l++;
-    else
-    r++;
+    else{
+        cout<<"NOT FOUND"<<endl;
     }
-    return ans;
-    
-
-
-
-    sort(arr,arr+size);
-    bool ans=false;
-    for(int i=0;i<size;i++){
-    int ind=upper_bound(arr+i+1,arr+size,arr[i]+n)-arr-1;
-    if(arr[ind]-arr[i]==n and ind!=i){
-        ans=true;
-        break;
+    for(auto it :mpp){
+        cout<<it.first<<" "<<it.second<<endl;
     }
+    //write a program to enter n string findout freq of each string lexicographical order
+    int n;
+    cout<<"Enter the number of the string"<<endl;
+    cin>>n;
+    cout<<"Enter the the strins"<<endl;
+    vector<string>v;
+    for(int i=0;i<n;i++){
+      string s;
+      cin>>s;
+      v.push_back(s);
     }
-    return ans;
-
-       
+    map<string,int>mp;
+    for(int i=0;i<n;i++){
+        mp[v[i]]++;
+    }
+    for(auto it:mp){
+        cout<<it.first<<" "<<it.second<<endl;
+    }
+    return 0;
 }

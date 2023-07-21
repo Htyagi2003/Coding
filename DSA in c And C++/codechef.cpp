@@ -1,36 +1,39 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int count(int x,int y){
-    int c =0;
-    if(x>y){
-        while(x>y){
-            c++;
-            x--;
-            
-        }
-        // cout<<c<<endl;
-        return c;
-    }
-    else{
-        while(x<y){
-            c++;
-            x++;
-        }
-        return c;
-    }
-    
+bool isswap(int a,int b){
+    return a<b;
+    //jaisa chaie vaisa kr likh lenge
 }
+void select(vector<int>&v,int n){
+    for(int i=0;i<n;i++){
+        int min_ind=i;
+        for(int j=i+1;j<n;j++){
+            if(isswap(v[min_ind],v[j])){
+                min_ind=j;
+            }
+        }
+        swap(v[min_ind],v[i]);
 
+    }
+}
 int main() {
 	// your code goes here
-	int t;
-    cin>>t;
-    while(t>0){
-	int x,y;
-	cin>>x>>y;
-	int n=count(x,y);
-    cout<<n<<endl;
-    t--;
+	int n;
+    vector<int>v;
+    cin>>n;
+    vector<pair<int,int>>vp;
+    for(int i=0;i<n;i++){
+        int a,b;
+        cin>>a>>b;
+        vp.push_back({a,b});
+        
     }
+    // select(v,n);
+    sort(vp.begin(),vp.end());
+    //sort(v.begin(),v.end(),isswap);
+        for(auto it:vp){
+            cout<<it.first<<" "<<it.second<<" "<<endl;
+        }
+
 	return 0;
 }
