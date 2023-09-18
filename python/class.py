@@ -1,4 +1,5 @@
 
+"""
 s='abesec'
 print(s[1:4:2])
 print(len(s))
@@ -17,4 +18,4 @@ print(x is y)
 # x=257
 # y=257
 # print(x is y )#reusability in int is aplicable only to 256
-
+"""

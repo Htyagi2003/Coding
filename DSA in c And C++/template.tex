@@ -1,0 +1,247 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Harsh}{Tyagi}{\urlstyle{same}
+\href{mailto:tyagih893@gmail.com}{tyagih893@gmail.com} | +91-6395267266}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Abes Engineering College}
+\descript{Btech in Computer Scienc-}
+\location{8.9/10 ygpa (2021-2023)}
+\sectionsep
+
+\subsection{Dewan Public School}
+\descript{class 12th-PCM}
+\location{2020}
+\location{ 92.4\%}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+
+Github:// \href{https://github.com/Htyagi2003}{\bf Harsh Tyagi} \\
+LinkedIn://  \href{https://www.linkedin.com/in/harsh-tyagi03/}{\bf Harsh Tyagi} \\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Curriculum}
+\runsubsection{Graduate}
+\descript{2025 }
+\textbullet Data Structure and Algorithms\\
+\textbullet Operating System\\
+\textbullet DBMS\\
+\textbullet OOP’S\\
+\textbullet Computer Network\\
+\sectionsep
+
+\section{Coding Profiles} 
+codechef:// \href{https://www.codechef.com/users/harshtyagi_25}{\bf Harsh Tyagi} \\
+Gfg:// \href{https://auth.geeksforgeeks.org/user/tyagi7x27}{\bf Harsh Tyagi} \\
+leetcode://  \href{https://leetcode.com/h_tya6i/}{\bf Harsh Tyagi} \\
+Hackerank://  \href{https://www.hackerrank.com/CSB_21B0121120}{\bf Harsh Tyagi} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming Languages}
+\textbullet{} C\textbullet{}   C++\textbullet{}  Python \\
+\textbullet{} R \textbullet{} HTML \textbullet{} CSS \\ 
+\textbullet{} JavaScript \textbullet{} AI \& ML \\
+\textbullet{} Data-Structures \textbullet{} Algorithms \\
+\sectionsep
+\subsection{LIBRARIES/FRAMEWORK}
+\textbullet React \textbullet{}   Tailwind\textbullet{}  Bootstrap \\
+\textbullet Pandas \textbullet{}   Numpy\textbullet{}  Scikit-learn \\
+\sectionsep
+\subsection{Tools/platform}
+\textbullet Git \textbullet{}   Github\textbullet{}  VS-Code \\
+\textbullet Jupiter-Notebook \textbullet{}   Anaconda\\
+\textbullet{}  code-sandbox \\
+\sectionsep
+\subsection{Database}
+ \textbullet MongoDB \textbullet{}   SQL\textbullet{}  Bootstrap \\
+\sectionsep
+\section{Intrests}
+\textbullet Data Science Enthusiast,\\
+\textbullet Learning New Technologies\\
+\textbullet Problem Resolution
+ \\
+ 
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Work Experience}
+\runsubsection{IBM-SkillBuild}
+\descript{| Data Analytics Intern }
+\location{July 2023 - september 2023}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize} 
+\item Collaborated with cross-functional teams to analyze and extract insights from complex 2-3 datasets.
+\item Conducted data cleaning, preprocessing, and visualization using Python and data analytics tools for dataset of 15000 rows.
+\item Assisted in the development of 2-3 predictive models to optimize marketing strategies and enhance decision-making.
+\end{tightemize}
+\sectionsep
+\runsubsection{Code Clause}
+\descript{| Data science Intern }
+\location{June 2023 - July 2023}
+\begin{tightemize} 
+\item Identified key customer segments based on purchasing behavior, leading to targeted marketing campaigns.
+\end{tightemize}
+\sectionsep
+\runsubsection{Enigma Programming Club}
+\descript{| Member}
+\begin{tightemize}
+\item Actively participated in the Programming Club, collaborating with fellow members on multiple coding projects and competitions.
+\item Organized and attended 4-5 coding workshops, enhancing knowledge in programming languages and algorithms.
+\end{tightemize}
+\sectionsep
+
+\section{Projects}
+\runsubsection{Fake News Detection}  \location{ML and DL , Python, HTML, CSS, Flask}
+\begin{tightemize}
+\item Utilized Natural Language Processing (NLP) techniques and sentiment analysis to evaluate the authenticity of news content.
+\item Trained the model on a diverse 9800rows dataset of news articles, achieving an accuracy rate of over 90\% in classifying fake news.
+\end{tightemize}
+\sectionsep
+\runsubsection{Blogging Website}  \location{ HTML, CSS, JavaScript}
+\begin{tightemize}
+\item The foremost goal was to create a user-friendly and intuitive interface that encourages users to read and write multiple blog posts effortlessly.
+\end{tightemize}
+
+\sectionsep
+
+\section{Achievements}
+\textbullet LeetCode-Solved 200+ problems.\\
+\textbullet GFG-Solved 200+ problems || 400+ score.\\
+\textbullet CodeChef-450+ problems || 3 star.\\
+\textbullet HackerRank- 5 stars- C++, C, P.S. ,Mathematics\\
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Certifications}
+\textbullet NPTEL: Data Analytics With Python (top 5\%) -July 2023.\\
+\textbullet NPTEL: Data Science For Engineers -May \textbf{}2023.\\
+\textbullet Cisco: Cyber security essentials -March 2023.\\
+\textbullet Infosys SpringBoard: DATA STRUCTURES AND ALGORITHMS-March 2023.\\
+\textbullet IBM: Data Science-Level 2 -April 2023.\\
+\sectionsep
+\section{Extra Skills}
+\textbullet Task Coordination
+, Sports Enthusiast\\
+\textbullet Leadership, 
+Communication Skills
+ \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}

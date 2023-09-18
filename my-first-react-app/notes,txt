@@ -1,0 +1,5 @@
+1.components-> its a javascript function that must return html content
+2.components-name must be start with starts with capital letters
+3. A single file that return html content that name start with capitla letter
+4. in vite the extension muist be .jsx
+
