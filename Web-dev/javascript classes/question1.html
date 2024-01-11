@@ -1,0 +1,30 @@
+<!-- write a javascript program to create class employ with attributes names and id and method displAY USING the concept function constructor -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+    <script>
+        function employ(id,name){
+            this.id=id;
+            this.name=name;
+        }
+        employ.prototype.age=18;
+        employ.prototype.display=function(){
+            document.write(this.id);
+            document.write(this.name);
+            document.write(this.age);
+        }
+        const ob1= new employ(201,"Harsh");
+        const ob12= new employ(2012,"Keshav");
+        ob1.display();
+        ob12.display();
+        
+    </script>
+    
+</body>
+</html>

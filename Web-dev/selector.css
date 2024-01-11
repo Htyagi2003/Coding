@@ -1,0 +1,66 @@
+*{
+
+    text-align: center;
+
+}
+/* add id selector to change the coloura and font size to 20px */
+#id{
+    color:green;
+    font-size: 20px;
+}
+/* add selector to change the color as ared and font type as times new roman
+ */
+ .rt{
+    color: aqua;
+    font-family: 'Times New Roman', Times, serif;
+ }
+ /* add group selector group as h1 and h2 to change colur red blue */
+ h1,h2,h3{
+    text-align:left;
+    color: blue;
+ }
+ /* add desendent combinator div and p with stylib bg colur as yellow */
+ div p{
+    background-color: yellow;
+ }
+ div>p{
+    background-color: blueviolet;
+ }
+ div+p{
+    background-color: orange;
+ }
+ div~p{
+    text-align: left;
+ }
+/* psuedo selector is used to define a special sate of an element such as a when a suer mouse over it style visited or unvisited link and style element will focused */
+/* question-> write a program to create a hper livk and add styling effects using psuedo class selectors such as newly creatyed link clor red visited link green mouse over pink active link blue */
+a:link{
+    color: pink;
+}
+a:hover{
+    color: blue;
+}
+a:active{
+    color: green;
+}
+a:visited{
+    color: aquamarine;
+}
+.btn:hover{
+    color: red;
+
+}
+.btn:active{
+    
+   box-shadow: 2px 2px 5px purple;
+
+}
+.btn{
+background-image: linear-gradient(135deg,#f34079 40%,#fc894d);
+border: none;
+border-radius: 5px;
+color: white;
+cursor: pointer;
+font-weight: bold;
+
+}

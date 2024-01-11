@@ -1,14 +1,11 @@
-import Student from "./student"
-import Footer from "./footer"
+import Booklist from "./Booklist";
+
 function App() {
-
   return (
-  <>
-  <Footer/>
-  <Student/>
-  </>
-  )
-
+    <>
+      <Booklist />
+    </>
+  );
 }
 
-export default App
+export default App;

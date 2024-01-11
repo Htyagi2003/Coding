@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var subject={sub1:"javascript"
+    ,sub2:"html",sub3:"anular"};
+    //for in loopm is used to get properties of object
+    for(let i in subject){
+        document.write(i);
+    }
+    for(let i in subject){
+        console.log(subject[i]);
+    
+    }
+
+     //write a program to show the use of forn of loop  -->
+     document.write("<br/>");
+     var college ="ABES";
+     for(let i of college){
+        document.write(i+"<br/>");
+     }
+     var arr=[1,2,3,4];
+     arr.forEach(myfunction);
+     function myfunction(value,index){
+        document.write(index+" "+value  +"<br/>");
+     }
+     // by simple for loop
+     for(let i =0;i<arr.length;i++){
+        document.write(arr[i]+"<br/>");
+     }
+     // string template
+     var name ="rohit";
+     var techn="c++";
+     document.write(`my name is ${name} i m good at in techno ${techn}`);
+// popup boxes
+    // write a program to display a meesage using alert
+    alert("hello:")
+    // write a program to give voters age and check voters age to eligible for voting
+    var age =prompt("Enter the age of voter:");
+    if(age>=18){
+        alert(" he /she can vote")
+    }
+    else{
+        alert(" not eligible:")
+    }
+    // write a program to use confirm box to change the backg color if we procedd otherwise green
+    var c=confirm("for changing the colour:")
+    if(c){
+        document.body.style.backgroundColor="red";
+    }
+    else{
+        document.body.style.backgroundColor="pink";
+    }
+    // functions
+    // write a program to display message using func
+    function message(){
+        alert("helloo buddy!!!!")
+    }
+    document.write("<br/>");
+    // passing parametres to function
+    // pass by valkue
+    // pass bt refrencve
+    // in refrece we have to pass the object
+    // exam[ple of pass by value
+    function swap(a,b){
+        var temp=a
+        a=b
+        b=temp
+    }
+    var a=10
+    var b=20
+    document.write( "before swapping"+a+"<br/>"+b)
+    document.write("<br/>");
+    swap(a,b)
+
+    document.write("after swapping"+a+"<br/>"+b)
+    //example of pass by reference
+    function swapref(object){
+        var t=object.a
+        object.a=object.b
+        object.b=t
+
+    }
+    var object={
+        a:10,
+        b:20
+    }
+    document.write( "before swapping"+object.a+"<br/>"+object.b)
+    swapref(object);
+    document.write("after swapping"+object.a+"<br/>"+object.b)
+     // anonymous function...
+    var x= function(a,b){
+        return a+b;
+    }
+    document.write("<br/>")
+    x(10,20);
+    document.write(x(10,20));
+    document.write("<br/>")
+    // FAT arrow function
+    // it has two type 
+    //1. single argument fat arrow function
+    // 2. multiple argument fat arrow function
+    var y=name=>{document.write("hiii....!!!"+name)}
+    y("HARSH");
+    document.write("<br/>")
+    // multiple argument
+    var z=(name,classs)=>{document.write("hiii....!!!"+name+"of"+classs)}
+    z("HARSH","CS-B");
+    // FAT arrow function with rest of all arguements
+    document.write("<br/>")
+    var t=(a,...args)=>{document.write(a+"   "+args)}
+    t(10,20,30,40,50,60,70,80,90,100);
+    function hii(){
+        var k=document.ga.har.value
+        alert("hiiiii"+k)
+        return 1
+    }
+    function validation(){
+        var t=document.f2.pas.value.length;
+        document.write(t);
+        if(document.f2.user.value==""){
+          alert("blank")
+          return false;
+        }
+        if(document.f2.pass.value==""){
+            alert("blank")
+            return false;
+          }
+        if(document.f2.pass.value.length<8){
+            alert("must use 8 length pass")
+            return false;
+          }
+        if(document.f2.phone.value.isNaN()){
+            alert("use numbers only")
+            return false;
+          }
+          return true;
+        
+    }
+    //event in js
+    // changing the state of an object is known as an event 
+    //events are actions those are dtedcted by javascript script 
+    // the process of creating o r reacrting over each event is known event handling
+    //we have to use saome fn.. to use the event so we can call the function 
+    // to the corresponding event
+     function message2(){
+        alert("HELLO HARSH !!");
+     }
+     function changecolor(){
+        document.getElementById("p").style.backgroundColor="red";
+     }
+     function changecolor2(){
+        document.getElementById("p").style.backgroundColor="green";
+     }
+
+
+    </script>
+    <br>
+    <center><button onclick="message()">click here!!!</button></center>
+    <form onsubmit="return hii()" name="ga">
+        <label >Enter name</label>
+        <input type="text" name="har"><br>
+        <!-- <input type="button",value="submit"> yeh wala use nhi kr skte submit ke lie normal button h -->
+        <button> submit here</button>
+
+        
+    </form>
+    <form name="f2" onsubmit="return validation()">
+        <label>enter username</label>
+        <input type="text" name="user">
+        <label >enter password</label>
+        <input type="password" name="pass">
+        <label >enter phone no.</label>
+        <input type="text" name="phone">
+        <button> submit button 2</button>
+    </form>
+
+
+     <center><button onclick="message2()"> click me once </button></center>
+     <p  id="p" style="background-color: green;" onmouseover="changecolor()" onmouseout="changecolor2()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae asperiores, repellendus consequatur consectetur quos illum neque in nostrum officia! Voluptas, cupiditate rem iure suscipit quia ratione possimus. Nostrum, vel tempore</p>
+
+
+</body>
+</html>

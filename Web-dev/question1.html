@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1" class="para" > hi this harsh</p>
+    <p id="p2" class="para">go back</p>
+    <table id="t1" border="1">
+        <tr>
+        <td> hello world
+        </td>
+        <td>hello mam</td>
+    </tr>
+    <tr>
+        <td> hello universe
+        </td>
+        <td>hello god</td>
+    </tr>
+    </table>
+    <p id="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nesciunt expedita quae officiis molestias facilis excepturi odio, illo, ad neque amet, quam soluta nulla quaerat minima explicabo totam illum magnam!</p>
+    <script>
+        function change(){
+            var t=document.getElementById("p1").innerText;
+           document.getElementById("p1").innerText=t.toUpperCase();
+            console.log(t)
+        }
+        change();
+        function change2(){
+           var y=document.getElementsByClassName("para");
+           
+           console.log(y)
+        }
+        change2()
+        function addrow(){
+            var n=document.getElementById("t1").insertRow(0);
+            var c1=n.insertCell(0);
+            var c2=n.insertCell(1);
+            c1.innerText="hello god";
+            c2.innerText="take a bow";
+            
+        }
+        addrow()
+        var i=0;
+        function addcolor(){
+            
+            var color=["red","green","aqua","blue","pink","violet","yellow","orange"];
+            var b=document.getElementById("p5");
+            b.style.backgroundColor=color[i]
+            i=(i+1)%color.length;
+        }
+        setInterval(addcolor,1000);
+    </script>
+</body>
+</html>
