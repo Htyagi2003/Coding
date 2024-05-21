@@ -13,9 +13,11 @@ void prints(int ind, vector<int> &ds, int arr[], int n)
         }
         if (ds.size() == 0)
             cout << "{ }";
+        a
 
-        // this is for the empty subsequence as well;
-        cout << endl;
+                // this is for the empty subsequence as well;
+                cout
+            << endl;
         return;
     }
     // this is to take the index value

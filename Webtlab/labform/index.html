@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      fieldset {
+        background-color: #eeeeee;
+      }
+
+      legend {
+        background-color: gray;
+        color: white;
+        padding: 5px 10px;
+      }
+
+      input {
+        margin: 5px;
+      }
+    </style>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Student Register</legend>
+        <table>
+          <tr>
+            <td>First-Name</td>
+            <td><input type="text" id="first-name" /></td>
+          </tr>
+          <tr>
+            <td>Last-Name</td>
+            <td><input type="text" id="last-name" /></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td><input type="radio" /> Male</td>
+            <td><input type="radio" /> Female</td>
+          </tr>
+          <tr>
+            <td>Father's-Name</td>
+            <td><input type="text" id="father-name" /></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td><input type="text" id="email" /></td>
+          </tr>
+          <tr>
+            <td>D-O-B</td>
+            <td><input type="date" id="date" /></td>
+          </tr>
+          <tr>
+            <td>Cont. No.</td>
+            <td><input type="text" id="cnt-no" /></td>
+          </tr>
+          <tr>
+            <td>Adress</td>
+            <td><textarea name="" id="add" cols="30" rows="5"></textarea></td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td>
+              <select name="" id="city">
+                <option value="XYZ">Ghaziabad</option>
+                <option value="XYZu">XYZu</option>
+                <option value="XYZi">XYZi</option>
+                <option value="XYZl">XYZl</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Mode Of Payment</td>
+            <td><input type="checkbox" />DD</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="checkbox" />C0D</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="checkbox" />Paytm</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="checkbox" />Check</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>
+              <input
+                type="button"
+                value="Submit"
+                onclick="a(document.getElementById('father-name').value)"
+              />
+            </td>
+            <td><input type="reset" value="Reset" /></td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      fieldset {
+        background-color: #eeeeee;
+      }
+
+      legend {
+        background-color: gray;
+        color: white;
+        padding: 5px 10px;
+      }
+
+      input {
+        margin: 5px;
+      }
+    </style>
+    <script src="new.js"></script>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>CalCulator</legend>
+        <table>
+          <tr>
+            <td>Enter First Number</td>
+            <td><input type="number" id="t1" /></td>
+          </tr>
+          <tr>
+            <td>Enter Second Number</td>
+            <td><input type="number" id="t2" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="ADD" onclick="add()" /></td>
+            <td><input type="button" value="SUB" onclick="sub()" /></td>
+            <td><input type="button" value="MULTI" onclick="mul()" /></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="DIVISION" onclick="div()" /></td>
+            <td><input type="button" value="ABS" onclick="ab()" /></td>
+            <td><input type="button" value="FLOOR" onclick="fl()" /></td>
+          </tr>
+          <tr>
+            <td>Result is:</td>
+            <td><span id="sp">0</span></td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </body>
+</html>
